@@ -1,0 +1,23 @@
+- name: Allow ts tcp
+  command: firewall-cmd --zone=public --permanent --add-port=9987/tcp
+  
+- name: Allow ts udp
+  command: firewall-cmd --zone=public --permanent --add-port=9987/udp
+
+- name: Allow ts tcp
+  command: firewall-cmd --zone=public --permanent --add-port=9988/tcp
+  
+- name: Allow ts udp
+  command: firewall-cmd --zone=public --permanent --add-port=9988/udp
+  
+# - name: Allow ts query tcp
+  # command: firewall-cmd --zone=public --permanent --add-port=10011/tcp
+  
+- name: Allow ts file
+  command: firewall-cmd --zone=public --permanent --add-port=30033/tcp
+  
+- name: Allow Sinusbot tcp
+  command: firewall-cmd --zone=public --permanent --add-port=8087/tcp
+  
+- name: Bounce firewalld
+  service: name=firewalld state=restarted

@@ -1,1 +1,2 @@
-# ansible-fw-teamspeak
+# TeamSpeak firewall entry
+Enables communication for TeamSpeak.
